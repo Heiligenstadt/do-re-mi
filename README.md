@@ -1,16 +1,53 @@
-# React + Vite
+Do Re Mi to A B C 🎻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a practice app to help music learners connect solfege (do–re–mi), letter notation (A–B–C), and the visual/auditory representation of notes.
+It’s built for a real student who learned only solfege and is now learning English letter names — so it focuses on reinforcement and quick feedback.
+This was my first project I built during my residency at Codesmith. 
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Two practice modes
 
-## React Compiler
+- Multiple choice: pick the correct solfege or letter
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Typed mode: type the answer and submit with Enter
 
-## Expanding the ESLint configuration
+2. Alternating questions: odd questions ask for solfege, even questions ask for letter notation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Score tracking: 10 questions per session → final score screen
+
+4. Practice log: sends name, score, practice mode, timestamp to the server and shows the last 5 practice sessions
+
+5. Audio + staff image: each note comes from the database with visual and audio references
+
+6. “First try” logic: if you get it wrong once, you can still move on but don’t get the point
+
+🏗️ Tech Stack
+
+Frontend: React + TypeScript + Vite
+
+Backend: Express + TypeScript
+
+Database: PostgreSQL
+
+Other: Fetch API, CORS enabled for http://localhost:5173
+
+🧠 How it works
+
+App fetches all notes from GET /notes on load.
+
+Quiz picks a random note.
+
+odd question → “What is this note in solfege?”
+
+even question → “What is this note in letter notation?”
+
+User answers in the selected mode.
+
+After 10 questions, the app:
+
+shows the score
+
+POSTs to /newlog with the user’s name and score
+
+displays the last 5 logs

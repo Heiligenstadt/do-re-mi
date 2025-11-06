@@ -4,6 +4,7 @@ This is a practice app to help music learners connect solfege (do–re–mi), le
 It’s built for a real student who learned only solfege and is now learning English letter names — so it focuses on reinforcement and quick feedback.
 This was my first project I built during my residency at Codesmith. 
 
+
 ✨ Features
 
 1. Two practice modes
@@ -22,6 +23,7 @@ This was my first project I built during my residency at Codesmith.
 
 6. “First try” logic: if you get it wrong once, you can still move on but don’t get the point
 
+
 🏗️ Tech Stack
 
 Frontend: React + TypeScript + Vite
@@ -31,6 +33,7 @@ Backend: Express + TypeScript
 Database: PostgreSQL
 
 Other: Fetch API, CORS enabled for http://localhost:5173
+
 
 🧠 App flow
 

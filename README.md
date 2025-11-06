@@ -25,8 +25,11 @@ This was my first project I built during my residency at Codesmith.
 🏗️ Tech Stack
 
 Frontend: React + TypeScript + Vite
+
 Backend: Express + TypeScript
+
 Database: PostgreSQL
+
 Other: Fetch API, CORS enabled for http://localhost:5173
 
 🧠 App flow

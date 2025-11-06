@@ -8,9 +8,9 @@ This was my first project I built during my residency at Codesmith.
 
 1. Two practice modes
 
-- Multiple choice: pick the correct solfege or letter
+  - Multiple choice: pick the correct solfege or letter
 
-- Typed mode: type the answer and submit with Enter
+  - Typed mode: type the answer and submit with Enter
 
 2. Alternating questions: odd questions ask for solfege, even questions ask for letter notation
 
@@ -25,29 +25,18 @@ This was my first project I built during my residency at Codesmith.
 🏗️ Tech Stack
 
 Frontend: React + TypeScript + Vite
-
 Backend: Express + TypeScript
-
 Database: PostgreSQL
-
 Other: Fetch API, CORS enabled for http://localhost:5173
 
-🧠 How it works
+🧠 App flow
 
 App fetches all notes from GET /notes on load.
-
 Quiz picks a random note.
-
-odd question → “What is this note in solfege?”
-
-even question → “What is this note in letter notation?”
-
+  - odd question → “What is this note in solfege?”
+  - even question → “What is this note in letter notation?”
 User answers in the selected mode.
-
 After 10 questions, the app:
-
-shows the score
-
-POSTs to /newlog with the user’s name and score
-
-displays the last 5 logs
+  - shows the score
+  - POSTs to /newlog with the user’s name and score
+  - displays the last 5 logs

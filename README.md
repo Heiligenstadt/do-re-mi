@@ -36,6 +36,7 @@ Quiz picks a random note.
   - odd question → “What is this note in solfege?”
   - even question → “What is this note in letter notation?”
 User answers in the selected mode.
+
 After 10 questions, the app:
   - shows the score
   - POSTs to /newlog with the user’s name and score
